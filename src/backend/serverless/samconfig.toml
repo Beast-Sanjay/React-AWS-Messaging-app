@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "F13-Hobbies-chat-demo"
+s3_prefix = "F13-Hobbies-chat-demo"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_NAMED_IAM"
+parameter_overrides = "DemoName=\"ChimeSDKChatDemo\""
