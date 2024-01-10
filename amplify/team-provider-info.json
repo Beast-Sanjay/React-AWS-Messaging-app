@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-f13hobbieschat-dev-203824-authRole",
+      "UnauthRoleArn": "arn:aws:iam::514799361739:role/amplify-f13hobbieschat-dev-203824-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::514799361739:role/amplify-f13hobbieschat-dev-203824-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-f13hobbieschat-dev-203824-deployment",
+      "UnauthRoleName": "amplify-f13hobbieschat-dev-203824-unauthRole",
+      "StackName": "amplify-f13hobbieschat-dev-203824",
+      "StackId": "arn:aws:cloudformation:us-east-1:514799361739:stack/amplify-f13hobbieschat-dev-203824/1bfdb350-afca-11ee-ad9d-0eca7e8c3ddb",
+      "AmplifyAppId": "d1jac79tey8qgx"
+    }
+  }
+}
