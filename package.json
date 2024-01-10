@@ -5,12 +5,11 @@
   "scripts": {
     "lint": "eslint src --ext .js,.jsx --fix",
     "build": "rimraf dist && webpack build",
-    "start": "webpack serve",
-    "sam:build": "cd src/backend/serverless && rm -rf .aws-sam && sam build && cd - ",
-    "sam:deploy:backend": "npm run sam:build && cd src/backend/serverless && sam deploy --resolve-s3 --no-fail-on-empty-changeset && aws cloudformation describe-stacks --stack-name F13-Hobbies-chat-demo --query 'Stacks[0].Outputs' --output json > appconfig.json && cd - ",
-    "sam:deploy:assets": "npm run build && aws s3 cp dist s3://$(aws cloudformation describe-stacks --stack-name F13-Hobbies-chat-demo --query \"Stacks[0].Outputs[?OutputKey=='assetsS3BucketName'].OutputValue\" --output text) --recursive",
-    "deploy": "npm run sam:deploy:backend && npm run sam:deploy:assets"
-  },
+    "sam:build": "cd src/backend/serverless && rm -rf .aws-sam && sam build && cd -",
+    "deploy:amplify": "npm run sam:build && npm run build && cp src/aws-exports.js dist/aws-exports.js && cp src/index.html dist/index.html && cp src/logo.png dist/logo.png && cp src/amplify.js dist/amplify.js",
+    "deploy": "npm run deploy:amplify"
+  }
+,  
   "dependencies": {
     "@aws-amplify/auth": "^4.3.20",
     "@aws-amplify/core": "^4.3.12",
